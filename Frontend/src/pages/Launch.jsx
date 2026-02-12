@@ -65,24 +65,24 @@ export default function Launch() {
                     <section className='l-contInputs'>
                         <section className='l-boxInput'>
                             <h6>Calorias (kcal)</h6>
-                            <input type="number" name="calorias" id="calorias" onChange={(e) => setCalorias(e.target.value)} />
+                            <input type="number" name="calorias" id="calorias" step={100} onChange={(e) => setCalorias(e.target.value)} />
                         </section>
 
                         <section className='l-boxInput'>
                             <h6>Proteinas (g)</h6>
-                            <input type="number" name="proteinas" id="proteinas" onChange={(e) => setProteinas(e.target.value)} />
+                            <input type="number" name="proteinas" id="proteinas" step={10} onChange={(e) => setProteinas(e.target.value)} />
                         </section>
                     </section>
 
                     <section className='l-contInputs'>
                         <section className='l-boxInput'>
                             <h6>Carboidratos (g)</h6>
-                            <input type="number" name="carboidratos" id="carboidratos" onChange={(e) => setCarboidratos(e.target.value)} />
+                            <input type="number" name="carboidratos" id="carboidratos" step={10} onChange={(e) => setCarboidratos(e.target.value)} />
                         </section>
 
                         <section className='l-boxInput'>
                             <h6>Gorduras (g)</h6>
-                            <input type="number" name="gorduras" id="gorduras" onChange={(e) => setGorduras(e.target.value)} />
+                            <input type="number" name="gorduras" id="gorduras" step={10} onChange={(e) => setGorduras(e.target.value)} />
                         </section>
                     </section>
 

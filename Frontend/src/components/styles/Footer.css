@@ -1,0 +1,23 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    background-color: #B9DDFF;
+}
+
+.footer i {
+    font-size: 3em;
+    color: black;
+}
+
+.footer h1 {
+    font-size: 1.2em;
+    color: #00000090;
+}
+
+.footer a {
+    text-decoration: none;
+}
