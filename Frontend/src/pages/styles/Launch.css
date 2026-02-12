@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.l-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ebf4ff;
+    height: 100vh;
+}
+
+.l-header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    top: 8vh;
+}
+
+.l-header h1 {
+    font-family: "Inter", sans-serif;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.l-header h3 {
+    font-family: 'Inter', sans-serif;
+    color: rgba(0, 0, 0, 0.5);
+    font-weight: normal;
+}
+
+.l-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.l-contHeader {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+}
+
+.l-contHeader h2 {
+    font-size: 1.8em;
+    font-weight: 650;
+}
+
+.l-contHeader i {
+    font-size: 1.8em;
+    color: #0066ff;
+}
+
+.l-contInputs {
+    display: flex;
+    flex-direction: row;
+    gap: 6em;
+}
+
+.l-boxInput {
+    display: flex;
+    flex-direction: column;
+    transform: scale(1.1);
+    transition: 300ms;
+}
+
+.l-boxInput input {
+    text-align: center;
+    width: 160px;
+    height: 35px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.l-boxInput input:hover {
+    border: 1px solid #0066ff;
+}
+
+.l-boxInput input:focus {
+    outline: none;
+    border: 1px solid #02008b;
+}
+
+.l-boxInput h6 {
+    font-size: 1em;
+    font-weight: 500;
+    color: rgb(85, 85, 85);
+}
+
+.l-button {
+    width: 80%;
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    background-color: #0066ff;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    font-weight: 550;
+    font-size: 1em;
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.l-button:hover {
+    background-color: blue;
+}
+
+#block:hover {
+    background-color: rgb(85, 85, 85);
+}

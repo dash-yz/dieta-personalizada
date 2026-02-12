@@ -11,6 +11,7 @@ export default function Launch() {
     const [proteinas, setProteinas] = useState( localStorage.getItem('proteinas') || 0)
     const [gorduras, setGorduras] = useState(localStorage.getItem('gorduras') || 0)
     const [coleta, setColeta] = useState(localStorage.getItem('coleta') || false)
+    const [erro, setErro] = useState('')
 
     useEffect(() => {
         if (coleta) {
@@ -18,8 +19,20 @@ export default function Launch() {
         }
     }, [coleta, navigate])
 
+    useEffect(() => {
+        if (!calorias || !carboidratos || !proteinas || !gorduras) {
+            if (!erro) {
+                setErro('Verifique se todos os campos foram preenchidos')
+            }
+        } else {
+            if (erro) {
+                setErro('')
+            }
+        }
+    }, [calorias, carboidratos, proteinas, gorduras, erro])
+
     const saveInfo = () => {
-        if (calorias > 0 && proteinas > 0 && carboidratos > 0 && gorduras > 0) {
+        if (!erro) {
             setColeta(true)
             
             localStorage.setItem('calorias', calorias)
@@ -46,7 +59,7 @@ export default function Launch() {
                     <section className='l-contHeader'>
                         <i class="fa-solid fa-bullseye"></i>
                         <h2>Defina suas Metas Diárias</h2>
-                        <i class="fa-light fa-burger"></i>
+                        <i class="fa-solid fa-burger"></i>
                     </section>
 
                     <section className='l-contInputs'>
@@ -73,7 +86,7 @@ export default function Launch() {
                         </section>
                     </section>
 
-                    <button className='l-button' onClick={saveInfo}>Salvar suas Metas</button>
+                    <button className='l-button' id={ erro ? 'block' : ''} onClick={saveInfo}>Salvar suas Metas</button>
                 </section>
 
                 <Footer />
